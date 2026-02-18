@@ -12,16 +12,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="sidebar">
-        <h2>🚑 RapidRoute</h2>
-        <button id="startBtn">Start Emergency</button>
-        <div class="status">
-            <p>Signal 1: <span id="signal1">RED</span></p>
-            <p>Signal 2: <span id="signal2">RED</span></p>
-            <p>Signal 3: <span id="signal3">RED</span></p>
+    <h2>🚑 RapidRoute</h2>
+
+    <div class="control-section">
+        <button id="startBtn" class="primary-btn">
+            🚨 Start Emergency
+        </button>
+    </div>
+
+    <div class="signals">
+        <h3>Signal Controls</h3>
+
+        <div class="signal-card">
+            <span>Signal 1</span>
+            <button class="signal-btn red" onclick="toggleSignal(1)">RED</button>
+        </div>
+
+        <div class="signal-card">
+            <span>Signal 2</span>
+            <button class="signal-btn red" onclick="toggleSignal(2)">RED</button>
+        </div>
+
+        <div class="signal-card">
+            <span>Signal 3</span>
+            <button class="signal-btn red" onclick="toggleSignal(3)">RED</button>
         </div>
     </div>
+</div>
+
+
+   
 
     <div id="map"></div>
 
