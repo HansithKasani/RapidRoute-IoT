@@ -16,4 +16,18 @@ document.getElementById("startBtn").addEventListener("click", function() {
     ambulance.setLatLng([17.3950, 78.4967]);
     document.getElementById("signal1").innerText = "GREEN";
 });
+function toggleSignal(num) {
+    const buttons = document.getElementsByClassName("signal-btn");
+    const btn = buttons[num - 1];
+
+    if (btn.classList.contains("red")) {
+        btn.classList.remove("red");
+        btn.classList.add("green");
+        btn.innerText = "GREEN";
+    } else {
+        btn.classList.remove("green");
+        btn.classList.add("red");
+        btn.innerText = "RED";
+    }
+}
 
