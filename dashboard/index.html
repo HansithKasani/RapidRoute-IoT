@@ -15,40 +15,59 @@
     <div class="sidebar">
     <h2>🚑 RapidRoute</h2>
 
-    <div class="control-section">
-        <button id="startBtn" class="primary-btn">
-            🚨 Start Emergency
-        </button>
+    <div class="system-status">System: Standby</div>
+
+    <button id="startBtn" class="primary-btn">
+        🚨 Activate Emergency Corridor
+    </button>
+
+    <div class="section-title">SIGNAL NETWORK</div>
+
+    <div class="signal-card">
+        <div class="signal-info">
+            <div class="signal-name">Signal 1</div>
+            <div class="signal-location">Narayanaguda</div>
+        </div>
+        <button class="signal-btn red" onclick="toggleSignal(1)">RED</button>
     </div>
 
-    <div class="signals">
-        <h3>Signal Controls</h3>
-
-        <div class="signal-card">
-            <span>Signal 1</span>
-            <button class="signal-btn red" onclick="toggleSignal(1)">RED</button>
+    <div class="signal-card">
+        <div class="signal-info">
+            <div class="signal-name">Signal 2</div>
+            <div class="signal-location">Kacheguda</div>
         </div>
+        <button class="signal-btn red" onclick="toggleSignal(2)">RED</button>
+    </div>
 
-        <div class="signal-card">
-            <span>Signal 2</span>
-            <button class="signal-btn red" onclick="toggleSignal(2)">RED</button>
+    <div class="signal-card">
+        <div class="signal-info">
+            <div class="signal-name">Signal 3</div>
+            <div class="signal-location">Barkatpura</div>
         </div>
-
-        <div class="signal-card">
-            <span>Signal 3</span>
-            <button class="signal-btn red" onclick="toggleSignal(3)">RED</button>
-        </div>
+        <button class="signal-btn red" onclick="toggleSignal(3)">RED</button>
     </div>
 </div>
 
 
-   
+<div class="content">
 
-    <div id="map"></div>
+    <div class="topbar">
+        <div class="title">RapidRoute Emergency Control System</div>
+        <div id="ambulanceCoords">Lat: -- | Lng: --</div>
+    </div>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+    <div class="main">
+        <div id="map"></div>
+
+        <div class="info-panel">
+            <h3>Nearest Hospital</h3>
+            <div id="hospitalName">Calculating...</div>
+            <div id="hospitalDistance"></div>
+        </div>
+    </div>
+
+</div>
+
 
 </body>
 </html>
